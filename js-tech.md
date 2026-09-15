@@ -88,6 +88,11 @@
 - `react-native-svg`：在开发中使用 svg 图片
 - `Nativewind`：在 React Native 中使用 TailWind CSS
 
+# Auth
+
+- `Better Auth`
+- `Better Auth UI`
+
 # ORM
 
 - `Prisma`
