@@ -33,34 +33,21 @@
 
 # Vue
 
-## 路由跳转
+- `Vue Router`：官方路由库
 
-- `Vue Router`：官方库
-
-## 状态管理
-
-- `Vuex`：前官方库
-- `Pinia`：官方库
-
-## Hooks
+- `Pinia`：官方状态管理库
 
 - `VueUse`
 
 # React
 
-## 路由跳转
+- `React Router`：路由库
+- `Tanstack Router React`：类型安全更强的路由库
 
-- `React Router`
-
-## 状态管理
-
-- `Redux`
-- `jotai`
-
-## Hooks
-
-- `ahooks`：由国人开发，但有更可靠的选择
-- `React Use`：拥有更多的 stars，更大的使用访问，稳定性会更好
+- `Redux`：状态管理库，老项目多，使用复杂
+- `zustand`：状态管理库，需要手动编写 selector
+- `jotai`：状态管理库，使用简单，灵活度高
+- `React Use`
 
 # 模拟数据
 
@@ -69,10 +56,10 @@
 
 # BaaS
 
-- `Supabase`：开源项目
+- `Supabase`：开源项目，提供一站式后端即服务
+- `Neon`：纯数据库，拥有完全的灵活性
 - `Firebase`：与 Google 生态高度融合，文档丰富，使用 NoSQL
 - `Appwrite`：社区和生态相对小
-- `Neon`
 
 # 环境变量
 
