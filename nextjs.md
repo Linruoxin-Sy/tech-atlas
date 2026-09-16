@@ -1065,3 +1065,198 @@ Client Component
 | `"use client"`           | Client Component 边界           |
 | `"use server"`           | Server Function / Server Action |
 
+# 一个比较适合实际项目长期演进的结构：
+
+- `app/`：**只负责 Next.js 框架约定**
+
+- `widgets/`：页面级业务组合
+
+- `features/`：用户操作/业务用例
+
+- `entities/`：领域实体
+
+- `shared/`：通用基础设施
+
+```
+my-next-app/
+│
+├── app/                              # Next.js App Router
+│   │
+│   ├── (auth)/                       # Route Group
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   └── register/
+│   │       └── page.tsx
+│   │
+│   ├── (dashboard)/                  # Route Group
+│   │   ├── layout.tsx                # Dashboard Layout
+│   │   │
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── students/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── courses/
+│   │   │   └── page.tsx
+│   │   │
+│   │   └── schedule/
+│   │       └── page.tsx
+│   │
+│   ├── api/                          # HTTP API
+│   │   └── ...
+│   │
+│   ├── layout.tsx                    # Root Layout
+│   ├── not-found.tsx
+│   ├── error.tsx
+│   └── globals.css
+│
+├── widgets/                          # 页面级业务组合
+│   │
+│   ├── dashboard-overview/
+│   │   ├── ui/
+│   │   │   └── DashboardOverview.tsx
+│   │   └── index.ts
+│   │
+│   ├── student-list/
+│   │   ├── ui/
+│   │   │   └── StudentList.tsx
+│   │   └── index.ts
+│   │
+│   ├── course-list/
+│   │   ├── ui/
+│   │   │   └── CourseList.tsx
+│   │   └── index.ts
+│   │
+│   └── schedule-calendar/
+│       ├── ui/
+│       │   └── ScheduleCalendar.tsx
+│       └── index.ts
+│
+├── features/                         # 用户操作 / 业务用例
+│   │
+│   ├── create-student/
+│   │   ├── ui/
+│   │   │   └── CreateStudentForm.tsx
+│   │   ├── model/
+│   │   │   ├── actions.ts
+│   │   │   └── schema.ts
+│   │   └── index.ts
+│   │
+│   ├── edit-student/
+│   │   ├── ui/
+│   │   │   └── EditStudentForm.tsx
+│   │   ├── model/
+│   │   │   ├── actions.ts
+│   │   │   └── schema.ts
+│   │   └── index.ts
+│   │
+│   ├── enroll-student/
+│   │   ├── ui/
+│   │   │   └── EnrollStudentForm.tsx
+│   │   ├── model/
+│   │   │   └── actions.ts
+│   │   └── index.ts
+│   │
+│   ├── create-course/
+│   │   ├── ui/
+│   │   ├── model/
+│   │   └── index.ts
+│   │
+│   └── reschedule-class/
+│       ├── ui/
+│       ├── model/
+│       └── index.ts
+│
+├── entities/                         # 领域实体
+│   │
+│   ├── student/
+│   │   ├── ui/
+│   │   │   ├── StudentAvatar.tsx
+│   │   │   ├── StudentName.tsx
+│   │   │   └── StudentStatus.tsx
+│   │   ├── model/
+│   │   │   ├── types.ts
+│   │   │   └── queries.ts
+│   │   └── index.ts
+│   │
+│   ├── course/
+│   │   ├── ui/
+│   │   ├── model/
+│   │   └── index.ts
+│   │
+│   ├── enrollment/
+│   │   ├── ui/
+│   │   ├── model/
+│   │   └── index.ts
+│   │
+│   ├── class-rule/
+│   │   ├── ui/
+│   │   ├── model/
+│   │   └── index.ts
+│   │
+│   └── class-session/
+│       ├── ui/
+│       ├── model/
+│       └── index.ts
+│
+├── shared/                           # 通用基础设施
+│   │
+│   ├── ui/                           # shadcn / 通用 UI
+│   │   ├── button/
+│   │   ├── dialog/
+│   │   ├── input/
+│   │   ├── select/
+│   │   └── ...
+│   │
+│   ├── server/                       # Server-only
+│   │   ├── db.ts
+│   │   ├── auth.ts
+│   │   └── ...
+│   │
+│   ├── client/                       # Client-only
+│   │   ├── ...
+│   │
+│   ├── lib/                          # 无环境依赖的工具
+│   │   ├── date.ts
+│   │   ├── format.ts
+│   │   └── utils.ts
+│   │
+│   ├── config/
+│   │   └── ...
+│   │
+│   └── types/
+│       └── ...
+│
+├── public/
+│   ├── images/
+│   └── ...
+│
+├── prisma/                           # 如果使用 Prisma
+│   ├── schema.prisma
+│   └── migrations/
+│
+├── tests/
+│   └── ...
+│
+├── components.json                   # shadcn
+├── next.config.ts
+├── tsconfig.json
+├── package.json
+└── ...
+```
+
+#  `app/` 和 FSA 的职责分离
+
+```
+app/(dashboard)/students/page.tsx
+                │
+                │ Next.js route
+                ↓
+        widgets/student-list
+                │
+        ┌───────┴────────┐
+        ↓                ↓
+ entities/student   features/create-student
+```
+
