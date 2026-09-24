@@ -29,6 +29,10 @@
 - `Fancy Components`
 - `Kokonut UI`
 
+# Animation component library
+
+- `Motion`
+
 # 轻通知组件
 
 - `Vue Toastification`：Vue 专属，更新少，但文档比较清楚
