@@ -260,6 +260,12 @@
 - `Lenis`
 - `GSAP ScrollSmoother`
 
-# 富文本编辑器
+# Rich Text Editor
 
 - `BlockNote`
+
+# Code Editor
+
+- `Monaco Editor`：VSCode 使用，体积较大，功能多
+- `CodeMirror`：轻量，可定制
+- `Sandpack`：需要实时运行代码
