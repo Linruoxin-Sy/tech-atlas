@@ -101,3 +101,27 @@ Regression test
 ```
 
 修复 Bug 应该采用的模式。
+
+## Improve Codebase
+
+使用：
+
+```
+/improve-codebase-architecture
+```
+
+它的流程是：
+
+```
+/improve-codebase-architecture
+        ↓
+/to-spec
+        ↓
+/to-tickets
+        ↓
+/implement
+        ↓
+/code-review
+```
+
+改善代码目录组织jie'gou应该采用的模式。
