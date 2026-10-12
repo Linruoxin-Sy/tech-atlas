@@ -124,4 +124,4 @@ Regression test
 /code-review
 ```
 
-改善代码目录组织jie'gou应该采用的模式。
+改善代码目录组织结构应该采用的模式。
