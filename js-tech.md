@@ -18,8 +18,7 @@
 # Shadcn-base component library
 
 - `tweakcn`：比 shadcn create 更灵活的调整工具
-- `Inspira UI`：用于 Vue/Nuxt，React 可以用 `Aceternity UI` 和 `Magic UI`
-- `Vue Bits` / `React Bits`
+- `Arc UI`
 - `Shadcn Studio`
 - `ReUI`
 - `tailark`
@@ -32,6 +31,8 @@
 # Animation component library
 
 - `Motion`
+- `Vue Bits` / `React Bits`
+- `Inspira UI`：用于 Vue/Nuxt，React 可以用 `Aceternity UI` 和 `Magic UI`
 
 # 轻通知组件
 
