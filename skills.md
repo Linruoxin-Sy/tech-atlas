@@ -4,6 +4,4 @@
 
 # Design
 
-- user-flow-diagram：user-flow 设计
-- information-architecture：导航与结构设计
 - using-git-worktrees: git worktrees 使用
