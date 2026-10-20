@@ -39,6 +39,8 @@
 - `Vue Toastification`：Vue 专属，更新少，但文档比较清楚
 - `React Hot Toast`：React 的轻通知组件
 - `sonner`：轻通知组件，默认给 React 用，Vue 可以使用 `Vue Sonner`
+- `Animate UI`：为 shadcn 生态提供动画实现
+- `transition-kit`：内容切换、布局变化甚至页面跳转都显得连贯
 
 # Vue
 
@@ -223,16 +225,15 @@
 
 # 跨端框架
 
-
- | 工具             | 主要定位       | 技术栈             | 覆盖平台                      |
-  | ---------------- | -------------- | ------------------ | ----------------------------- |
-  | **Electron**     | 桌面应用       | Chromium + Node.js | Windows / macOS / Linux       |
-  | **Tauri**        | 轻量桌面应用   | Web 前端 + Rust    | Windows / macOS / Linux       |
-  | **Wails**        | 桌面应用（Go） | Web 前端 + Go      | Windows / macOS / Linux       |
-  | **React Native** | 原生移动应用   | React / JS / TS    | iOS / Android                 |
-  | **Flutter**      | 原生移动/桌面  | Dart + Skia        | iOS / Android / Desktop / Web |
-  | **Kuikly**       | 高性能移动端   | JS / 自研渲染      | iOS / Android                 |
-  | **UniApp**       | 多端应用       | Vue / JS           | 小程序 / H5 / App             |
+| 工具             | 主要定位       | 技术栈             | 覆盖平台                      |
+| ---------------- | -------------- | ------------------ | ----------------------------- |
+| **Electron**     | 桌面应用       | Chromium + Node.js | Windows / macOS / Linux       |
+| **Tauri**        | 轻量桌面应用   | Web 前端 + Rust    | Windows / macOS / Linux       |
+| **Wails**        | 桌面应用（Go） | Web 前端 + Go      | Windows / macOS / Linux       |
+| **React Native** | 原生移动应用   | React / JS / TS    | iOS / Android                 |
+| **Flutter**      | 原生移动/桌面  | Dart + Skia        | iOS / Android / Desktop / Web |
+| **Kuikly**       | 高性能移动端   | JS / 自研渲染      | iOS / Android                 |
+| **UniApp**       | 多端应用       | Vue / JS           | 小程序 / H5 / App             |
 
 # 并发控制
 
