@@ -271,3 +271,11 @@
 - `Monaco Editor`：VSCode 使用，体积较大，功能多
 - `CodeMirror`：轻量，可定制
 - `Sandpack`：需要实时运行代码
+
+# Draggable
+
+- `dnd-kit`
+
+# Layout
+
+- `react-resizable-panels`
